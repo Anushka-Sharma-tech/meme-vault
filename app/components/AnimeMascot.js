@@ -171,7 +171,7 @@ export default function AnimeMascot() {
   const displayList = searchResults.length > 0 ? searchResults : popularCharacters;
 
   return (
-    <div className="fixed left-8 top-[14%] z-40 pointer-events-auto select-none w-72">
+    <div className="hidden lg:block fixed left-8 top-[14%] z-40 pointer-events-auto select-none w-72">
       <div className="relative flex flex-col items-center gap-20">
         <div className="relative z-20 w-full min-h-[96px] bg-zinc-900 border-2 border-orange-500/70 px-4 py-5 rounded-2xl shadow-[0_14px_28px_rgba(0,0,0,0.75)] flex flex-col items-center justify-center text-center">
           <span className="text-orange-500 text-[11px] uppercase tracking-widest font-black mb-1">

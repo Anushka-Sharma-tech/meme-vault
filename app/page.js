@@ -142,14 +142,14 @@ export default function Home() {
 
   return (
     <main suppressHydrationWarning className="min-h-screen bg-gradient-to-br from-[#0a0a0a] to-[#121212] text-zinc-200 font-sans relative overflow-x-hidden">
-      <header className="px-8 py-4 flex items-center justify-between border-b border-zinc-800/60 bg-black/40 backdrop-blur-md sticky top-0 z-50">
-        <div className="flex items-center gap-10 w-full max-w-5xl">
-          <h1 className="text-2xl font-black italic tracking-tighter drop-shadow-md">
+      <header className="px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-zinc-800/60 bg-black/40 backdrop-blur-md sticky top-0 z-50">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 lg:gap-10 w-full sm:max-w-5xl">
+          <h1 className="text-xl sm:text-2xl font-black italic tracking-tighter drop-shadow-md whitespace-nowrap">
             Meme<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400">Vault</span>
           </h1>
 
-          <div className="flex-1 flex max-w-xl bg-zinc-900/80 rounded-full overflow-hidden border border-zinc-700/50 shadow-inner focus-within:border-orange-500 transition-colors">
-            <span className="pl-4 pr-2 flex items-center text-zinc-500">🔍</span>
+          <div className="flex-1 w-full sm:w-auto flex sm:max-w-xl bg-zinc-900/80 rounded-full overflow-hidden border border-zinc-700/50 shadow-inner focus-within:border-orange-500 transition-colors">
+            <span className="pl-3 sm:pl-4 pr-2 flex items-center text-zinc-500">🔍</span>
             <input
               suppressHydrationWarning
               type="text"
@@ -157,12 +157,12 @@ export default function Home() {
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={handleSearchSubmit}
-              className="w-full bg-transparent px-2 py-2.5 text-sm text-white focus:outline-none"
+              className="w-full bg-transparent px-2 py-2 sm:py-2.5 text-xs sm:text-sm text-white focus:outline-none"
             />
           </div>
         </div>
 
-        <div className="relative flex gap-4 items-center">
+        <div className="relative flex gap-4 items-center shrink-0">
           {userSession ? (
             <button
               onClick={() => setShowProfile(!showProfile)}
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="pl-[340px] pr-8 py-6 flex flex-wrap gap-2 select-none">
+      <div className="px-4 sm:px-6 lg:pl-[340px] lg:pr-8 py-6 flex flex-wrap gap-2 select-none">
         {CATEGORIES.map(cat => (
           <button
             key={cat}
@@ -196,7 +196,7 @@ export default function Home() {
               setSearchInput('');
               fetchFeed(cat);
             }}
-            className={`px-4 py-1.5 rounded-full text-[11px] font-bold tracking-wider transition-all shadow-sm ${
+            className={`px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-[11px] font-bold tracking-wider transition-all shadow-sm ${
               activeCategory === cat
                 ? 'bg-gradient-to-r from-orange-600 to-amber-500 text-white shadow-[0_0_15px_rgba(249,115,22,0.3)] border-transparent'
                 : 'bg-zinc-900/80 border border-zinc-800 text-zinc-400 hover:bg-zinc-800 hover:text-white'
@@ -208,11 +208,11 @@ export default function Home() {
       </div>
 
       <div className="flex">
-        <div className="w-[340px] shrink-0" />
+        <div className="hidden lg:block lg:w-[340px] shrink-0" />
 
-        <div className="flex-1 pr-10 pb-16">
+        <div className="flex-1 px-4 sm:px-6 lg:pr-10 pb-16">
           {loading && memes.length === 0 && sounds.length === 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-pulse">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 animate-pulse">
               {[...Array(6)].map((_, i) => (
                 <div key={i} className="bg-zinc-900/50 border border-zinc-800/50 rounded-2xl h-72" />
               ))}
@@ -225,11 +225,11 @@ export default function Home() {
           ) : (
             <>
               {activeCategory === 'AUDIO MEMES' ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
                   {sounds.map(sound => <SoundCard key={sound.id} sound={sound} />)}
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                   {memes.map((meme, i) => (
                     <div
                       key={`${meme.id}-${i}`}
@@ -242,7 +242,7 @@ export default function Home() {
                 </div>
               )}
 
-              <div ref={observerRef} className="h-12 w-full flex items-center justify-center text-sm text-zinc-500 mt-8 font-medium italic">
+              <div ref={observerRef} className="h-12 w-full flex items-center justify-center text-xs sm:text-sm text-zinc-500 mt-8 font-medium italic">
                 {fetchingMore && activeCategory !== 'AUDIO MEMES' ? 'Summoning the next wave of memes...' : ''}
               </div>
             </>
