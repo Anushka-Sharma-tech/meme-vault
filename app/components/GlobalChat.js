@@ -644,7 +644,7 @@ export default function GlobalChat() {
                   setNewMessage(e.target.value);
                   setChatError('');
                 }}
-                className="w-[82%] bg-black border border-zinc-800 rounded-xl px-3 py-2 text-white placeholder-zinc-600 focus:outline-none focus:border-orange-500 disabled:opacity-40 transition-colors text-[11px]"
+                className="w-[82%] bg-black border border-zinc-800 rounded-xl px-3 py-2 text-white placeholder-gray-300 focus:outline-none focus:border-orange-500 disabled:opacity-40 transition-colors text-[11px]"
               />
 
               <button
