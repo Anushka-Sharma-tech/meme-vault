@@ -1,5 +1,5 @@
-# <img width="498" height="498" alt="RonaldoSiuuuGIF" src="https://github.com/user-attachments/assets/867cdb66-7f83-459e-8594-491ca9617543" />
- MemeVault
+
+# <img src="https://github.com/user-attachments/assets/1abaaa06-6b6d-445b-ab22-9ad0f83e9bf6" style="height: 1.2em; vertical-align: middle;" alt="SigmaColdGIF" /> MemeVault
 
 > *A decentralized-feeling, real-time social ecosystem engineered for modern web communities to curate memes and connect instantly.*
 
