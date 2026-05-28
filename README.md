@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 MemeVault
 
-## Getting Started
+> **A real-time social meme aggregator and global chat platform built for modern web communities.**
 
-First, run the development server:
+MemeVault is a high-performance web application designed for seamless meme curation and community interaction. It features real-time database synchronization, dynamic user profiles, an incognito chat mode, and a robust automated moderation system.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤖 Built with AI Collaboration
+This project was proudly developed through an extensive human-AI collaboration. By leveraging the advanced reasoning and coding capabilities of top-tier AI models, MemeVault was rapidly prototyped, debugged, and deployed to production. 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Special thanks to the following AI assistants for their contributions to architecture, logic, and code generation:
+* **Claude:** For deep architectural reasoning, state management structuring, and complex component logic.
+* **Gemini:** For contextual problem solving, deployment strategies, and security compliance drafting.
+* **Codex:** For rapid boilerplate generation, syntax formatting, and inline code completion.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Core Features
 
-To learn more about Next.js, take a look at the following resources:
+* **Live Global Chat:** Real-time messaging with instant `@username` tagging and synchronized database polling.
+* **Incognito Mode:** Post anonymously with custom aliases (e.g., *Anonymous Ferret*).
+* **Automated Moderation:** Built-in keyword blocking, threat detection, and an automated strike/ban system to keep the community safe.
+* **Dynamic User Profiles:** Secure authentication with limited-edit usernames, tracked securely via custom database limits.
+* **Seamless State Management:** Instantaneous UI updates without heavy page reloads, utilizing optimized React hooks and localized caching.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Tech Stack
 
-## Deploy on Vercel
+* **Frontend Framework:** Next.js & React
+* **Styling:** Tailwind CSS
+* **Backend & Database:** Supabase (PostgreSQL, Auth, Realtime Subscriptions)
+* **Deployment & Hosting:** Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛡️ Security
+
+MemeVault is built with modern web security practices in mind:
+* **Row Level Security (RLS):** All Supabase tables are locked down via strict RLS policies to prevent unauthorized data manipulation.
+* **Environment Protection:** No sensitive API keys or database passwords are hardcoded or exposed to the public repository.
+* **Limit Enforcement:** Username edits and data writes are strictly throttled at the database level to prevent spam and abuse.
+
+---
+
+## ⚖️ Legal & Compliance
+
+MemeVault includes built-in compliance infrastructure to ensure a safe and legal operating environment:
+* **Terms of Service (ToS) & Privacy Policy:** Integrated legal agreements governing user behavior and data usage.
+* **Cookie Consent:** Frontend banner tracking local storage consent to comply with standard privacy regulations.
+* **DMCA Ready:** Safe Harbor attribution practices for third-party content, with a clear takedown request pipeline.
+
+---
+*Developed securely for the modern web.*
