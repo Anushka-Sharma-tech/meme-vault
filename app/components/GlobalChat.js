@@ -630,23 +630,27 @@ export default function GlobalChat() {
 
             <form onSubmit={send} className="flex gap-2 justify-end">
               <input
-                suppressHydrationWarning
-                type="text"
-                placeholder={
-                  !userSession ? 'Sign in to chat...' :
-                  isRestricted ? 'You are restricted...' :
-                  isAnon ? `Incognito ${anonAlias || 'Ghost'} - type message...` :
-                  '@username or message...'
-                }
-                disabled={!userSession || !!isRestricted}
-                value={newMessage}
-                onChange={e => {
-                  setNewMessage(e.target.value);
-                  setChatError('');
-                }}
-                className="w-[82%] bg-black border border-zinc-800 rounded-xl px-3 py-2 text-white placeholder-gray-300 focus:outline-none focus:border-orange-500 disabled:opacity-40 transition-colors text-[11px]"
-              />
-
+  suppressHydrationWarning
+  type="text"
+  placeholder={
+    !userSession ? 'Sign in to chat...' :
+    isRestricted ? 'You are restricted...' :
+    isAnon ? `Incognito ${anonAlias || 'Ghost'} - type message...` :
+    '@username or message...'
+  }
+  disabled={!userSession || !!isRestricted}
+  value={newMessage}
+  onChange={e => {
+    setNewMessage(e.target.value);
+    setChatError('');
+  }}
+  className="w-[82%] bg-black border border-zinc-800 rounded-xl px-3 py-2 text-white placeholder-gray-300 focus:outline-none focus:border-orange-500 disabled:opacity-40 transition-colors text-[11px]"
+  style={{ 
+    color: 'white', 
+    WebkitTextFillColor: 'white', 
+    opacity: 1 
+  }}
+/>
               <button
                 type="submit"
                 disabled={!userSession || !!isRestricted || !newMessage.trim()}
