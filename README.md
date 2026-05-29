@@ -1,6 +1,5 @@
 
 # <img src="https://github.com/user-attachments/assets/1abaaa06-6b6d-445b-ab22-9ad0f83e9bf6" style="height: 1.2em; vertical-align: middle;" alt="SigmaColdGIF" /> MemeVault
-
 > *A decentralized-feeling, real-time social ecosystem engineered for modern web communities to curate memes and connect instantly.*
 
 ---
@@ -36,7 +35,7 @@ Immense credit belongs to our digital co-architects for their specialized contri
 
 ### 🔒 Operational Security
 
-MemeVault operates under strict modern defensive guardrails:
+MemeMascot operates under strict modern defensive guardrails:
 * **RLS Enforcement** ── Every individual data table is bound by strict Row Level Security schemas to block cross-tenant database manipulation.
 * **Zero-Leak Vectors** ── Absolute separation of production secrets; core API keys and environment variables are strictly restricted from version control.
 * **Spam Mitigation** ── Ingestion thresholds and profile write limits are structurally checked at the database layer to completely neutralize script flooding.
