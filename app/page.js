@@ -145,7 +145,7 @@ export default function Home() {
       <header className="px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-zinc-800/60 bg-black/40 backdrop-blur-md sticky top-0 z-50">
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 lg:gap-10 w-full sm:max-w-5xl">
           <h1 className="text-xl sm:text-2xl font-black italic tracking-tighter drop-shadow-md whitespace-nowrap">
-            Meme<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400">Vault</span>
+            Meme<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400">Mascot</span>
           </h1>
 
           <div className="flex-1 w-full sm:w-auto flex sm:max-w-xl bg-zinc-900/80 rounded-full overflow-hidden border border-zinc-700/50 shadow-inner focus-within:border-orange-500 transition-colors">

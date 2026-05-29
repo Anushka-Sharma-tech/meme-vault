@@ -6,8 +6,8 @@ import ProfilePanelWrapper from './components/ProfilePanelWrapper';
 import CookieBanner from './components/CookieBanner';
 
 export const metadata = {
-  title: 'MemeVault Secure Platform',
-  description: 'Production social meme network engine',
+  title: 'Meme Mascot',
+description: 'Your anime-powered meme discovery platform',
 };
 
 export default function RootLayout({ children }) {
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
 
           {/* Global Legal Footer - Accessible on all pages */}
           <footer className="w-full py-8 border-t border-zinc-800/60 bg-black/40 backdrop-blur-md text-center text-xs text-zinc-500 z-40 relative">
-            <p>&copy; {new Date().getFullYear()} MemeVault. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Meme Mascot. All rights reserved.</p>
             <div className="flex justify-center gap-6 mt-3 font-medium tracking-wide">
               <a href="/terms" className="hover:text-orange-500 transition-colors cursor-pointer">
                 Terms of Service
