@@ -2,7 +2,7 @@ import './globals.css';
 import { ThemeProvider } from './context/ThemeContext';
 import AnimeMascot from './components/AnimeMascot';
 import GlobalChat from './components/GlobalChat';
-import ProfilePanel from './components/ProfilePanel';
+import ProfilePanelWrapper from './components/ProfilePanelWrapper';
 import CookieBanner from './components/CookieBanner';
 
 export const metadata = {
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           {/* System Control Overlays */}
           <AnimeMascot />
           <GlobalChat />
-          <ProfilePanel />
+          <ProfilePanelWrapper />
           
           {/* Legal Compliance Banner Overlay */}
           <CookieBanner />
