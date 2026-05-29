@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
         <p>Last updated: [28th MAY 2026]</p>
         
         <h2 className="text-xl font-bold text-white mt-6">1. Information We Collect</h2>
-        <p>When you sign up for MemeVault, we collect your email address and a username. This is securely handled by our authentication provider (Supabase).</p>
+        <p>When you sign up for MemeMascot, we collect your email address and a username. This is securely handled by our authentication provider (Supabase).</p>
         
         <h2 className="text-xl font-bold text-white mt-6">2. How We Use Your Information</h2>
         <p>We use your email exclusively to create and secure your account. We do not sell your data, send spam, or share your email with third-party marketers.</p>
