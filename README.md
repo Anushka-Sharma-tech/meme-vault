@@ -1,7 +1,7 @@
 # <img src="https://github.com/user-attachments/assets/1abaaa06-6b6d-445b-ab22-9ad0f83e9bf6" style="height: 1.2em; vertical-align: middle;" alt="SigmaColdGIF" /> MemeMascot
 > *A decentralized-feeling, real-time social ecosystem engineered for modern web communities to curate memes and connect instantly.*
 
-🌐 **Live Deployment** ── [meme-mascot.vercel.app](https://meme-mascot.vercel.app)
+🌐 **Live Deployment** ── https://meme-mascot-alpha.vercel.app/
 
 ---
 
