@@ -5,7 +5,7 @@
 ---
 
 ### 🔮 The AI Alchemist Guild
-This engine was brought to life through a high-fidelity human-machine synthesis. By bridging creative oversight with advanced generative logic, MemeVault progressed from a raw blueprint to a production-ready matrix. 
+This engine was brought to life through a high-fidelity human-machine synthesis. By bridging creative oversight with advanced generative logic, MemeMascot progressed from a raw blueprint to a production-ready matrix. 
 
 Immense credit belongs to our digital co-architects for their specialized contributions:
 * **`Claude`** ── Mastered the structural blueprint, reactive state engines, and core telemetry.
