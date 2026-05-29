@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server';
+import { getMockMemesForCategory } from '../../utils/mockMemes';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+// Enable/disable mock data
+const USE_MOCK_DATA = !process.env.REDDIT_CLIENT_ID || !process.env.REDDIT_CLIENT_SECRET;
 
 const SUBREDDITS = {
   MEMES: 'memes',
@@ -154,6 +158,24 @@ export async function GET(request) {
   const searchQuery = searchParams.get('search') || '';
   const subreddit = SUBREDDITS[category] || 'memes';
 
+  // 🎭 USE MOCK DATA if Reddit API not configured
+  if (USE_MOCK_DATA) {
+    console.log('🎭 Using mock data - Reddit API not configured');
+    const mockMemes = getMockMemesForCategory(category);
+    
+    // Simple search filter for mock data
+    const filteredMemes = searchQuery 
+      ? mockMemes.filter(m => m.title.toLowerCase().includes(searchQuery.toLowerCase()))
+      : mockMemes;
+    
+    return NextResponse.json({
+      memes: filteredMemes,
+      nextPage: null,
+      usingMockData: true
+    });
+  }
+
+  // Original Reddit API logic
   try {
     const data = await fetchRedditJson({
       subreddit,
